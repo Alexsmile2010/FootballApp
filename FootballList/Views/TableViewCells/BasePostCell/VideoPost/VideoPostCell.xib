@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="VideoPostCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="VideoPostCell" rowHeight="278" id="34j-IN-DXd" customClass="VideoPostCell" customModule="FootballList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="278"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="34j-IN-DXd" id="CDi-B1-6VK">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="277.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEp-Ws-hWQ">
+                        <rect key="frame" x="16" y="8" width="343" height="33.5"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="33.5" id="QFD-5j-fEW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Fw-z6-o29">
+                        <rect key="frame" x="319" y="229.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="6yW-WT-aFv"/>
+                            <constraint firstAttribute="height" constant="40" id="GDp-Yd-lA3"/>
+                        </constraints>
+                        <state key="normal" image="Share"/>
+                        <connections>
+                            <action selector="shareButtonTapped:" destination="34j-IN-DXd" eventType="touchUpInside" id="q0d-wj-MjX"/>
+                        </connections>
+                    </button>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gF4-Bj-ahY">
+                        <rect key="frame" x="16" y="251.5" width="45.5" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="nhC-7z-7Eo"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="15"/>
+                        <color key="textColor" red="0.14901960780000001" green="0.1960784314" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Z4P-lt-gqG">
+                        <rect key="frame" x="16" y="49" width="343" height="173"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="173" id="RNj-yO-e8S"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Circled Play" translatesAutoresizingMaskIntoConstraints="NO" id="6Zn-eI-t9V">
+                        <rect key="frame" x="162" y="114" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="22S-Uu-6NC"/>
+                            <constraint firstAttribute="width" constant="50" id="fet-DG-NUq"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="ZEp-Ws-hWQ" firstAttribute="leading" secondItem="CDi-B1-6VK" secondAttribute="leading" constant="16" id="HV6-OZ-qrG"/>
+                    <constraint firstAttribute="trailing" secondItem="Z4P-lt-gqG" secondAttribute="trailing" constant="16" id="JXw-Bf-SCV"/>
+                    <constraint firstItem="ZEp-Ws-hWQ" firstAttribute="top" secondItem="CDi-B1-6VK" secondAttribute="top" constant="8" id="OCG-0y-sfh"/>
+                    <constraint firstItem="Z4P-lt-gqG" firstAttribute="top" secondItem="ZEp-Ws-hWQ" secondAttribute="bottom" constant="7.5" id="UsN-qX-KOa"/>
+                    <constraint firstAttribute="bottom" secondItem="6Fw-z6-o29" secondAttribute="bottom" constant="8" id="Vms-GI-F1b"/>
+                    <constraint firstAttribute="trailing" secondItem="6Fw-z6-o29" secondAttribute="trailing" constant="16" id="cQh-5y-iN6"/>
+                    <constraint firstItem="6Fw-z6-o29" firstAttribute="top" secondItem="Z4P-lt-gqG" secondAttribute="bottom" constant="7.5" id="imk-6a-dxl"/>
+                    <constraint firstItem="gF4-Bj-ahY" firstAttribute="leading" secondItem="CDi-B1-6VK" secondAttribute="leading" constant="16" id="l9I-jd-Tq4"/>
+                    <constraint firstAttribute="bottom" secondItem="gF4-Bj-ahY" secondAttribute="bottom" constant="8" id="ltP-x3-m7Z"/>
+                    <constraint firstItem="Z4P-lt-gqG" firstAttribute="leading" secondItem="CDi-B1-6VK" secondAttribute="leading" constant="16" id="n29-g7-s0Q"/>
+                    <constraint firstAttribute="trailing" secondItem="ZEp-Ws-hWQ" secondAttribute="trailing" constant="16" id="tSc-35-vqf"/>
+                    <constraint firstItem="6Zn-eI-t9V" firstAttribute="centerY" secondItem="CDi-B1-6VK" secondAttribute="centerY" id="wTl-zW-XI1"/>
+                    <constraint firstItem="6Zn-eI-t9V" firstAttribute="centerX" secondItem="CDi-B1-6VK" secondAttribute="centerX" id="zl8-Dt-7o1"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="dateLabel" destination="gF4-Bj-ahY" id="uSu-HF-D2I"/>
+                <outlet property="mainImageView" destination="Z4P-lt-gqG" id="uBm-sH-gH6"/>
+                <outlet property="mainTitleLabel" destination="ZEp-Ws-hWQ" id="qiG-zc-S3T"/>
+            </connections>
+            <point key="canvasLocation" x="-154.5" y="230"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Circled Play" width="25" height="25"/>
+        <image name="Share" width="25" height="25"/>
+    </resources>
+</document>

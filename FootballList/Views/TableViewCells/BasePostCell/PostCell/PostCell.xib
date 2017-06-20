@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Roboto-Regular.ttf">
+            <string>Roboto-Regular</string>
+        </array>
+        <array key="SFUIDisplay-Regular.otf">
+            <string>SFUIDisplay-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="NewsFeedCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" id="XgO-ui-YnH" userLabel="PostCell" customClass="PostCell" customModule="FootballList" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="117"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XgO-ui-YnH" id="8Dg-wr-cEn">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="116.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1Q-n7-UBc">
+                        <rect key="frame" x="16" y="16" width="343" height="27"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="27" id="854-lM-JEH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" red="0.14901960784313725" green="0.19607843137254902" blue="0.2196078431372549" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="awB-Fr-jlD">
+                        <rect key="frame" x="16" y="8" width="343" height="0.0"/>
+                        <constraints>
+                            <constraint firstAttribute="height" id="0u3-fB-I6e"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9H-0W-Df2">
+                        <rect key="frame" x="8" y="68.5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="45" id="OKC-h7-xXv"/>
+                            <constraint firstAttribute="width" constant="45" id="rio-WJ-7pk"/>
+                        </constraints>
+                        <state key="normal" image="Share"/>
+                        <connections>
+                            <action selector="shareButtonTapped:" destination="XgO-ui-YnH" eventType="touchUpInside" id="QYf-VP-aZy"/>
+                        </connections>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L3v-or-L5H">
+                        <rect key="frame" x="187" y="68.5" width="180" height="45"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8O-LQ-ULc">
+                                <rect key="frame" x="0.0" y="0.0" width="131" height="45"/>
+                                <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="14"/>
+                                <color key="textColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="59L-pY-cxW">
+                                <rect key="frame" x="135" y="0.0" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="GUT-7r-4A3"/>
+                                    <constraint firstAttribute="height" constant="45" id="WlC-6h-j8u"/>
+                                </constraints>
+                                <state key="normal" image="Like"/>
+                                <connections>
+                                    <action selector="voteButtonTapped:" destination="XgO-ui-YnH" eventType="touchUpInside" id="wIs-qf-mBs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="s8O-LQ-ULc" secondAttribute="bottom" id="9N4-1F-c2V"/>
+                            <constraint firstAttribute="trailing" secondItem="59L-pY-cxW" secondAttribute="trailing" id="MJ2-c1-KOy"/>
+                            <constraint firstAttribute="height" constant="45" id="aqG-Uv-F8k"/>
+                            <constraint firstAttribute="bottom" secondItem="59L-pY-cxW" secondAttribute="bottom" id="eXR-Iu-mKt"/>
+                            <constraint firstItem="59L-pY-cxW" firstAttribute="top" secondItem="L3v-or-L5H" secondAttribute="top" id="h0J-v3-PaH"/>
+                            <constraint firstItem="s8O-LQ-ULc" firstAttribute="top" secondItem="L3v-or-L5H" secondAttribute="top" id="kJu-oH-OKe"/>
+                            <constraint firstItem="s8O-LQ-ULc" firstAttribute="leading" secondItem="L3v-or-L5H" secondAttribute="leading" id="m32-fY-Kbf"/>
+                            <constraint firstItem="59L-pY-cxW" firstAttribute="leading" secondItem="s8O-LQ-ULc" secondAttribute="trailing" constant="4" id="rap-Cl-NUg"/>
+                            <constraint firstAttribute="width" constant="180" id="t7s-xl-u4a"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Читать далее" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="abT-RH-TQh">
+                        <rect key="frame" x="16" y="45.5" width="150" height="19"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="19" id="XBs-aT-PVP"/>
+                            <constraint firstAttribute="width" constant="150" id="fh4-NO-hXp"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="16"/>
+                        <color key="textColor" red="0.050980392159999999" green="0.2784313725" blue="0.63137254899999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Время" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6T9-o6-3vs">
+                        <rect key="frame" x="323.5" y="-14" width="35.5" height="14"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.74620378521126762" colorSpace="calibratedWhite"/>
+                        <fontDescription key="fontDescription" name="SFUIDisplay-Regular" family="SF UI Display" pointSize="12"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="awB-Fr-jlD" firstAttribute="top" secondItem="8Dg-wr-cEn" secondAttribute="top" constant="8" id="8xg-is-w1h"/>
+                    <constraint firstItem="awB-Fr-jlD" firstAttribute="bottom" secondItem="6T9-o6-3vs" secondAttribute="bottom" constant="8" id="KnZ-cq-6N3"/>
+                    <constraint firstAttribute="trailing" secondItem="k1Q-n7-UBc" secondAttribute="trailing" constant="16" id="VeW-if-hC8"/>
+                    <constraint firstItem="d9H-0W-Df2" firstAttribute="top" secondItem="abT-RH-TQh" secondAttribute="bottom" constant="4" id="WEH-ls-jRy"/>
+                    <constraint firstAttribute="bottom" secondItem="d9H-0W-Df2" secondAttribute="bottom" constant="3" id="WGC-9D-G2c"/>
+                    <constraint firstItem="k1Q-n7-UBc" firstAttribute="top" secondItem="awB-Fr-jlD" secondAttribute="bottom" constant="8" id="XZ1-Iy-1i7"/>
+                    <constraint firstItem="k1Q-n7-UBc" firstAttribute="leading" secondItem="8Dg-wr-cEn" secondAttribute="leading" constant="16" id="XhR-I6-8yp"/>
+                    <constraint firstAttribute="trailing" secondItem="awB-Fr-jlD" secondAttribute="trailing" constant="16" id="fBD-g7-UKO"/>
+                    <constraint firstItem="awB-Fr-jlD" firstAttribute="leading" secondItem="8Dg-wr-cEn" secondAttribute="leading" constant="16" id="kKw-pG-1B0"/>
+                    <constraint firstItem="d9H-0W-Df2" firstAttribute="leading" secondItem="8Dg-wr-cEn" secondAttribute="leading" constant="8" id="syX-AT-W79"/>
+                    <constraint firstAttribute="trailing" secondItem="L3v-or-L5H" secondAttribute="trailing" constant="8" id="t0P-cP-g49"/>
+                    <constraint firstItem="abT-RH-TQh" firstAttribute="leading" secondItem="8Dg-wr-cEn" secondAttribute="leading" constant="16" id="tTr-h3-1WN"/>
+                    <constraint firstItem="6T9-o6-3vs" firstAttribute="trailing" secondItem="awB-Fr-jlD" secondAttribute="trailing" id="w2r-go-sI1"/>
+                    <constraint firstAttribute="bottom" secondItem="L3v-or-L5H" secondAttribute="bottom" constant="3" id="xVQ-V8-A8l"/>
+                    <constraint firstItem="abT-RH-TQh" firstAttribute="top" secondItem="k1Q-n7-UBc" secondAttribute="bottom" constant="2" id="zcO-Wg-UTa"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="dateLabel" destination="6T9-o6-3vs" id="b5u-H1-tto"/>
+                <outlet property="mainImageView" destination="awB-Fr-jlD" id="yh4-WQ-UtY"/>
+                <outlet property="mainImageViewHeightConstrains" destination="0u3-fB-I6e" id="vAW-u6-dvz"/>
+                <outlet property="mainTitleLabel" destination="k1Q-n7-UBc" id="9A5-dx-tqH"/>
+                <outlet property="readMoreLabel" destination="abT-RH-TQh" id="faU-LI-SPA"/>
+                <outlet property="titleLabelHeightConstrains" destination="854-lM-JEH" id="bJJ-bh-Hzf"/>
+                <outlet property="voteButton" destination="59L-pY-cxW" id="7mU-jU-zHA"/>
+                <outlet property="votesCountLabel" destination="s8O-LQ-ULc" id="k2a-WD-6Xm"/>
+            </connections>
+            <point key="canvasLocation" x="-154.5" y="192.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="Like" width="25" height="25"/>
+        <image name="Share" width="25" height="25"/>
+    </resources>
+</document>

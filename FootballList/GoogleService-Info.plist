@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+	<string>ca-app-pub-3940256099942544/4411468910</string>
+	<key>CLIENT_ID</key>
+	<string>519555169168-o00o782bgur3hlhq9t8tgvvc30615nsd.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.519555169168-o00o782bgur3hlhq9t8tgvvc30615nsd</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCWFROEhOGzp_vyPaPmtjiBsz79aQBt2ZA</string>
+	<key>GCM_SENDER_ID</key>
+	<string>519555169168</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.vedidev.footballnews</string>
+	<key>PROJECT_ID</key>
+	<string>footballlist-73b8a</string>
+	<key>STORAGE_BUCKET</key>
+	<string>footballlist-73b8a.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<true/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<false/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:519555169168:ios:fabd4850d3b1f0d2</string>
+	<key>DATABASE_URL</key>
+	<string>https://footballlist-73b8a.firebaseio.com</string>
+</dict>
+</plist>

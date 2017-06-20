@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Новости-->
+        <scene sceneID="IY6-aI-5FX">
+            <objects>
+                <viewController storyboardIdentifier="NewsFeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HMk-M7-Lwq" customClass="NewsFeedViewController" customModule="FootballList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cVd-95-Qn4"/>
+                        <viewControllerLayoutGuide type="bottom" id="DdQ-AS-ZMC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KEX-jt-ePC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5W0-Wm-tr7">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="HMk-M7-Lwq" id="Ly3-4r-sLG"/>
+                                    <outlet property="delegate" destination="HMk-M7-Lwq" id="hyc-Mh-X5T"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="cuf-hH-g1c">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cuf-hH-g1c" firstAttribute="centerY" secondItem="KEX-jt-ePC" secondAttribute="centerY" id="VjC-h6-ice"/>
+                            <constraint firstItem="5W0-Wm-tr7" firstAttribute="leading" secondItem="KEX-jt-ePC" secondAttribute="leading" id="kWK-53-wOz"/>
+                            <constraint firstItem="cuf-hH-g1c" firstAttribute="centerX" secondItem="KEX-jt-ePC" secondAttribute="centerX" id="l01-em-GAc"/>
+                            <constraint firstAttribute="trailing" secondItem="5W0-Wm-tr7" secondAttribute="trailing" id="pQ8-2D-6VL"/>
+                            <constraint firstItem="5W0-Wm-tr7" firstAttribute="top" secondItem="KEX-jt-ePC" secondAttribute="top" id="scW-Fg-E95"/>
+                            <constraint firstItem="DdQ-AS-ZMC" firstAttribute="top" secondItem="5W0-Wm-tr7" secondAttribute="bottom" id="t0Z-dV-zz5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Новости" id="RVP-Nt-Vnf"/>
+                    <connections>
+                        <outlet property="indicator" destination="cuf-hH-g1c" id="wQN-DE-0LP"/>
+                        <outlet property="tableView" destination="5W0-Wm-tr7" id="vFq-mA-ssQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGA-pe-Qoa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1674" y="-215"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="8yB-y1-5Ec">
+            <objects>
+                <viewController storyboardIdentifier="NewsFeedSwiperViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="h04-Zd-LZN" customClass="NewsFeedSwiperViewController" customModule="FootballList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UHW-Pd-1Oj"/>
+                        <viewControllerLayoutGuide type="bottom" id="VFi-Ak-fMT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dj7-gO-Tbc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Главная" id="tzp-bm-O2X">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="yG8-Th-jhf">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ej2-N1-r4Y">
+                                <rect key="frame" x="16" y="9" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Settings"/>
+                                <connections>
+                                    <action selector="settingsButtonTapped:" destination="h04-Zd-LZN" eventType="touchUpInside" id="BV5-0d-7pr"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ML3-7O-YaI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="841" y="139"/>
+        </scene>
+        <!--Видео-->
+        <scene sceneID="Z7H-PA-ysV">
+            <objects>
+                <viewController storyboardIdentifier="VideoFeedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zJ4-JS-2xR" customClass="VideoFeedViewController" customModule="FootballList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="q6C-vK-Ow6"/>
+                        <viewControllerLayoutGuide type="bottom" id="4Og-su-QNP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zwx-5X-WhS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="rRn-mj-CBF">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="zJ4-JS-2xR" id="gni-TX-Yem"/>
+                                    <outlet property="delegate" destination="zJ4-JS-2xR" id="wTf-Ls-Zq9"/>
+                                </connections>
+                            </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wen-45-0Kk">
+                                <rect key="frame" x="177" y="323.5" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4Og-su-QNP" firstAttribute="top" secondItem="rRn-mj-CBF" secondAttribute="bottom" id="Kyc-gV-rPs"/>
+                            <constraint firstItem="wen-45-0Kk" firstAttribute="centerX" secondItem="Zwx-5X-WhS" secondAttribute="centerX" id="VWI-m5-V1w"/>
+                            <constraint firstItem="wen-45-0Kk" firstAttribute="centerY" secondItem="Zwx-5X-WhS" secondAttribute="centerY" id="lpK-AM-OdI"/>
+                            <constraint firstItem="rRn-mj-CBF" firstAttribute="top" secondItem="Zwx-5X-WhS" secondAttribute="top" id="ml5-t6-W1A"/>
+                            <constraint firstItem="rRn-mj-CBF" firstAttribute="leading" secondItem="Zwx-5X-WhS" secondAttribute="leading" id="uN2-wR-zSU"/>
+                            <constraint firstAttribute="trailing" secondItem="rRn-mj-CBF" secondAttribute="trailing" id="wOO-Zg-ItD"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="Видео" id="hZ7-ob-epR">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="gOs-Yk-1gK">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="indicator" destination="wen-45-0Kk" id="p5E-yc-DHE"/>
+                        <outlet property="tableView" destination="rRn-mj-CBF" id="Ykv-hZ-n7u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6N9-hi-0Vm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1672.8" y="492.50374812593708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ILj-2B-xXd">
+            <objects>
+                <navigationController storyboardIdentifier="NewsFeedSwiperNavigationViewController" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CuF-gQ-Piu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YjS-2M-9EC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="barTintColor" red="0.082352941176470587" green="0.396078431372549" blue="0.75294117647058822" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="h04-Zd-LZN" kind="relationship" relationship="rootViewController" id="P1K-Tp-Foi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UN3-Vg-5Pn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Settings" width="25" height="25"/>
+    </resources>
+</document>
